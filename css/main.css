@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  background: #14c25a;
+}
+.main-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+}
+.left-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  padding: 20px;
+}
+.left-container .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.left-container .main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  column-gap: 20px;
+}
+.left-container .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+  flex: 1;
+  height: 100%;
+  justify-content: space-between;
+}
+.left-container .chat-list {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.left-container .chat-list .search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+
+  height: 40px;
+  background: #f0f2f5;
+  justify-content: space-between;
+  border-radius: 14px;
+}
+.left-container .chat-list .search input:focus {
+  outline: none;
+}
+.left-container .chat-list .person-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  height: 76vh;
+  overflow-y: scroll;
+  padding: 4px;
+}
+.left-container .chat-list .person-list::-webkit-scrollbar {
+  width: 2px;
+  background-color: rgb(255, 255, 255);
+}
+
+.left-container .chat-list .person-list::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: rgb(203, 203, 203);
+}
+.left-container .chat-list .person-list .person {
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: space-between;
+}
+.left-container .chat-list .person-list .person:nth-child(2) {
+  background-color: #f0f2f5;
+}
+.middel-container {
+  flex: 2;
+  height: 100%;
+  background: #fafafa;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.middel-container .top-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f7f7fc;
+  border-top-right-radius: 20px;
+}
+.middel-container .chat-place {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.middel-container .chat-place::-webkit-scrollbar{
+  width: 2px;
+}
+.middel-container .chat-place::-webkit-scrollbar-thumb{
+  width: 2px;
+  background: #B0C5C2;
+  border-radius: 20px;
+}
+.middel-container .chat-place .warn {
+  padding: 10px 30px;
+  border-radius: 12px;
+  background-color: #feecdc;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  font-size: 10px;
+  width: 60%;
+  align-content: center;
+  margin: 0px auto;
+}
+.middel-container .chat-place .messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.my-message {
+  position: relative;
+  max-width: 342px;
+  width: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: #ffffff;
+
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  word-wrap: break-word;
+  border-bottom: 2px solid rgb(199, 199, 199);
+  font-size: 14px;
+  color: #111b21;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: flex-end;
+}
+.your-message {
+  position: relative;
+  max-width: 342px; /* Set the maximum width for the message container */
+  width: auto; /* Let the width be determined by the content */
+  margin-left: auto; /* Adjust the left margin as desired */
+  padding: 10px; /* Add some padding for spacing */
+  background-color: #D9FDD3; /* Set background color */
+
+  border-bottom-right-radius: 8px; /* Optional: Add rounded corners for a nicer look */
+  border-bottom-left-radius: 8px; /* Optional: Add rounded corners for a nicer look */
+  border-top-left-radius: 8px; /* Optional: Add rounded corners for a nicer look */
+  word-wrap: break-word;
+  border-bottom: 2px solid rgb(199, 199, 199);
+  font-size: 14px;
+  color: #111b21;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: flex-end;
+}
+.my-message .hour {
+  font-size: 10px;
+  color: #667781;
+}
+
+.my-message::before {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid rgb(199, 199, 199);
+  top: 0;
+  left: -10px; /* Adjust as needed to position before the container */
+  width: 10px; /* Set the width */
+  height: 10px; /* Set the height to cover the full height of the container */
+  background-color: #ffffff; /* Match the background color of the container */
+  border-top-left-radius: 0px; /* Adjust radius to create half circle */
+  border-bottom-left-radius: 200px; /* Set the border color to create the triangle shape */
+}
+.img{
+  backdrop-filter: blur(20px);
+
+  padding: 4px;
+  column-gap: 0px;
+}
+.img .hour{
+  position: absolute;
+  right: 10px;
+  bottom: 16px;
+}
+.forward{
+  position: absolute;
+  top: 80px;
+  right: -30px;
+}
+.second{
+  margin-top: -18px;
+}
+.second::before{
+  content: "";
+  display: none;
+  
+}
+.your-message::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid rgb(199, 199, 199);
+  top: 0;
+  right: -10px; /* Adjust as needed to position before the container */
+  width: 10px; /* Set the width */
+  height: 10px; /* Set the height to cover the full height of the container */
+  background-color: #D9FDD3; /* Match the background color of the container */
+  border-top-left-radius: 0px; /* Adjust radius to create half circle */
+  border-bottom-right-radius: 200px; /* Set the border color to create the triangle shape */
+}
+.your-message .hour{
+    font-size: 10px;
+    color: #667781;
+
+}
+.your-message .time-tick{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+}
+.send-message{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  background-color: #F6F6F6;
+  align-items: center;
+}
+input:focus{
+  outline: none;
+}
